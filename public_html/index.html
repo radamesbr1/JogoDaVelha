@@ -12,22 +12,26 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="Estilo.css" />
     </head>
     <body>
-        <button type="button" id="b1">Clique1</button>
-        <button type="button" id="b2">Clique2</button>
-        <button type="button" id="b3">Clique3</button>
+        <input type="button" id="b1" onclick="escrita()" value="-"/>
+        <input type="button" id="b2" value="-">
+        <input type="button" id="b3" value="-">
         <br/>
-        <button type="button" id="b4">Clique4</button>
-        <button type="button" id="b5">Clique5</button>
-        <button type="button" id="b6">Clique6</button>
+        <input type="button" id="b4" value="-">
+        <input type="button" id="b5" value="-">
+        <input type="button" id="b6" value="-">
         <br/>
-        <button type="button" id="b7">Clique7</button>
-        <button type="button" id="b8">Clique8</button>
-        <button type="button" id="b9">Clique9</button>
+        <input type="button" id="b7" value="-">
+        <input type="button" id="b8" value="-">
+        <input type="button" id="b9" value="-">
             
         <script>
-            
+           
+           function escrita(){
+               document.getElementById("b1").value=("X");
+           }
             
             
         </script>
+        
     </body>
 </html>
