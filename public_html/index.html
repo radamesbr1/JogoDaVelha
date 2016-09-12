@@ -6,29 +6,64 @@ and open the template in the editor.
 -->
 <html>
     <head>
+     
         <title>Jogo da Velha</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="Estilo.css" />
     </head>
     <body>
-        <input type="button" id="b1" onclick="escrita()" value="-"/>
-        <input type="button" id="b2" value="-">
-        <input type="button" id="b3" value="-">
-        <br/>
-        <input type="button" id="b4" value="-">
-        <input type="button" id="b5" value="-">
-        <input type="button" id="b6" value="-">
-        <br/>
-        <input type="button" id="b7" value="-">
-        <input type="button" id="b8" value="-">
-        <input type="button" id="b9" value="-">
+        <script>
+            var vez="x";
+            var id;
             
+        </script>
+       
+         <input type="button" id="b1" onclick="vez=escrita(vez,id)" value="-"/>
+         <input type="button" id="b2" onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" id="b3"  onclick="vez=escrita(vez,id)" value="-">
+        <br/>
+        <input type="button" id="b4"  onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" id="b5"  onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" id="b6"  onclick="vez=escrita(vez,id)" value="-">
+        <br/>
+        <input type="button" id="b7"  onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" id="b8"  onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" id="b9"  onclick="vez=escrita(vez,id)" value="-">
+         
         <script>
            
-           function escrita(){
-               document.getElementById("b1").value=("X");
-           }
+           function escrita(tipo,id){
+               if(tipo==="x"){
+                    document.getElementById(id).value=("o");          
+                    return "o";
+                }
+            else{
+                   document.getElementById(id).value=("x");
+                   return "x";
+               }
+        }
+        
+        
+        function Vencedor(){
+           var v1="";
+           var v2="";
+           var v3="";
+           var cont=1;
+          while(cont<10){
+            v1=document.getElementById(b1).value;
+            v2=document.getElementById(b2).value;
+            v3=document.getElementById(b3).value;
+            if(v1===v2 && v2===v3){
+                alert("O Jogador com ");
+          
+        }   
+        alert("Passei ");
+            cont=cont+3;
+        
+        
+        }
+    }
             
             
         </script>
