@@ -1,4 +1,4 @@
-input{
+.tabuleiro{
     background-color:white;
     color: black;
     font-weight: bolder;
@@ -15,6 +15,6 @@ input{
     
 }
 
-input:hover{
+.tabuleiro:hover{
     background-color:gainsboro;
 }

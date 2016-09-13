@@ -20,19 +20,28 @@ and open the template in the editor.
             
         </script>
        
-        <input type="button"  id="b1" onclick="vez=escrita(vez,id)" value="-"/>
-         <input type="button" id="b2" onclick="vez=escrita(vez,id)" value=" ">
-        <input type="button"  id="b3"  onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" class="tabuleiro" id="b1" onclick="vez=escrita(vez,id)" value="-"/>
+         <input type="button" class="tabuleiro" id="b2" onclick="vez=escrita(vez,id)" value=" ">
+        <input type="button" class="tabuleiro" id="b3"  onclick="vez=escrita(vez,id)" value="-">
         <br/>
-        <input type="button" id="b4"  onclick="vez=escrita(vez,id)" value="-">
-        <input type="button" id="b5"  onclick="vez=escrita(vez,id)" value=" ">
-        <input type="button" id="b6"  onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" class="tabuleiro" id="b4"  onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" class="tabuleiro" id="b5"  onclick="vez=escrita(vez,id)" value=" ">
+        <input type="button" class="tabuleiro" id="b6"  onclick="vez=escrita(vez,id)" value="-">
         <br/>
-        <input type="button" id="b7"  onclick="vez=escrita(vez,id)" value="-">
-        <input type="button" id="b8"  onclick="vez=escrita(vez,id)" value=" ">
-        <input type="button" id="b9"  onclick="vez=escrita(vez,id)" value="-">
-         
+        <input type="button" class="tabuleiro" id="b7"  onclick="vez=escrita(vez,id)" value="-">
+        <input type="button" class="tabuleiro" id="b8"  onclick="vez=escrita(vez,id)" value=" ">
+        <input type="button" class="tabuleiro" id="b9"  onclick="vez=escrita(vez,id)" value="-">
+        <input id="reset" type="button" value="Reiniciar" onclick="reset()">
+        
         <script>
+           
+            function reset(){
+               
+                for(i=1; i< 10; i++){
+                    nome='b'+i;
+                     document.getElementById(nome).value = '-';
+                }
+            }
            
             function Vencedor(){
            var cont=1;
@@ -46,6 +55,7 @@ and open the template in the editor.
            var v3=document.getElementById("b"+(convert=cont.toString())).value;
            if(v1==v2 && v2==v3)
                alert("O Jogador com (" + v1 +") Venceu");
+           reset();
            cont=cont+1;
        }
        //codigo para pegar sequencia 1 , 5, 9 
@@ -57,6 +67,7 @@ and open the template in the editor.
            var v3=document.getElementById("b"+(convert=cont.toString())).value;
            if(v1==v2 && v2==v3)
                alert("O Jogador com (" + v1 +") Venceu");
+           reset();
            
        //codigo para pegar sequencia 3 , 5 ,7
        cont=1;
@@ -67,6 +78,7 @@ and open the template in the editor.
            var v3=document.getElementById("b"+(convert=cont.toString())).value;
            if(v1==v2 && v2==v3)
                alert("O Jogador com (" + v1 +") Venceu");
+           
        
        
       }   
